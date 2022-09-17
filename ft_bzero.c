@@ -9,25 +9,17 @@
 /*   Updated: 2022/09/15 21:58:47 by plakorn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-#include <stdio.h>
-#include <strings.h>
+
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *str;
-	
-	str = (unsigned char*)s;
-	while (n--)
-	*str++ = '\0';
-}
+	size_t	i;
 
-int	main()
-{
-	const char a[] = "hola";
-	ft_bzero(a,2);
-	printf("%s\n", a);
+	i = 0;
+	while (i < n)
+	{
+		*(unsigned char *)(s + i) = '\0';
+		i++;
+	}
 }
-  //a = /0/0la/0
-*/
